@@ -1,0 +1,9 @@
+::POKRETANJE TESTOVA::
+
+Preduslovi za pokretanje testova:
+
+- Instalacija npm-a (u terminalu)
+"npm install -g npm"
+
+
+Instalacija i pokretanje Cypress frameworka
