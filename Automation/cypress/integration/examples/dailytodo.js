@@ -17,9 +17,9 @@ describe("DailyToDo test cases", () => {
 
   it("Create multiple tasks for the ToDo list", () => {
     cy.visit("https://dailytodo.org/");
-    const task_entry1 = "a_random_entry1{enter}";
-    const task_entry2 = "a_random_entry2{enter}";
-    const task_entry3 = "a_random_entry3";
+    const task_entry1 = "First entry{enter}";
+    const task_entry2 = "Second entry{enter}";
+    const task_entry3 = "Third entry";
     cy.get('input[type="submit"]').click();
     cy.get("textarea").type(task_entry1);
     cy.get("textarea").type(task_entry2);
@@ -33,7 +33,7 @@ describe("DailyToDo test cases", () => {
     //Selektuj checkmark drugog taska kao završen
     cy.get("tbody .tasktr").each(($el, index, $list) => {
       const tableValue = $el.find(".text").text();
-      if (tableValue.includes("a_random_entry2")) {
+      if (tableValue.includes("Second entry")) {
         cy.wrap($el).find("td:nth-of-type(2)").click();
       }
     });
