@@ -38,6 +38,12 @@ describe("DailyToDo test cases", () => {
       }
     });
   });
-});
 
-//cy.get("#pitch p").should("have.text", "Daily Todo is a simple tool that lets you to track your daily tasks.");
+  it("Start the DailyToDo list but cancel the entry", () => {
+    cy.visit("https://dailytodo.org/");
+    const homeDescription = "Daily Todo is a simple tool";
+    cy.get('input[type="submit"]').click();
+    cy.get(".red").click();
+    cy.get("#pitch p").contains(homeDescription);
+  });
+});
