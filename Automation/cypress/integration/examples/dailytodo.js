@@ -8,7 +8,6 @@ describe("DailyToDo test cases", () => {
     cy.get("textarea").type(task_entry);
     cy.get('input[type="submit"]').click();
 
-    //         Assets        //
     //Provjeri broj unosa/redova u tabeli da je jednak broju unosa taskova
     cy.get("tr").find(".text").should("have.length", "1");
     //Provjeri da li je naziva taska u tabeli jednak tasku korisnika
@@ -26,7 +25,6 @@ describe("DailyToDo test cases", () => {
     cy.get("textarea").type(task_entry3);
     cy.get('input[type="submit"]').click();
 
-    //         Assets        //
     //Provjeri broj unosa/redova u tabeli da je jednak broju unosa taskova
     cy.get("tr").find(".text").should("have.length", "3");
 
@@ -44,6 +42,7 @@ describe("DailyToDo test cases", () => {
     const homeDescription = "Daily Todo is a simple tool";
     cy.get('input[type="submit"]').click();
     cy.get(".red").click();
+    //Provjeri da li je naslov prisutan, ako jeste znaci da se nalazimo na pocetnoj stranici (samo je tamo prisutan)
     cy.get("#pitch p").contains(homeDescription);
   });
 });
