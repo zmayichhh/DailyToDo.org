@@ -1,9 +1,15 @@
 ::POKRETANJE TESTOVA::
 
-Preduslovi za pokretanje testova:
+- Izabrao sam nekoliko testova in Manuelnog test Plana koji su bili zanimljivi a koji nisu zahtijevali dodatne biblioteke za lakše izvršavanje (DateTime etc.)
+- Ukoliko dođe do problema prilikom pokretanja testa, ispod se nalaze potrebne upute za kreiranje okruženja od nule.
 
-- Instalacija npm-a (u terminalu)
-"npm install -g npm"
+U text editoru po izboru, kreirajte prazan folder, u terminalu navigirajte do tog foldera. 
 
-
-Instalacija i pokretanje Cypress frameworka
+1) npm -i init (kreira package.json file)
+2) npm install cypress -savedev (instalira cypress iz npm paketa i stavlja ga u package.json)
+3) Klonirajte repozitorij sa github-a
+4) Za pokretanje cypress-a, kroz terminal navigirajte u Automation folder
+5) U terminalu pokrenite  "npx cypress open" (pokrece ekterni prozor za pokretanje testova)
+6) Izaberite E2E Testing
+7) Bilo koji web browser
+8) Kliknite na dailytodo.js file za automatsko pokretanje
