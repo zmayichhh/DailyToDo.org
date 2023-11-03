@@ -6,7 +6,7 @@ module.exports = defineConfig({
     url: "https://dailytodo.org",
   },
   e2e: {
-    specPattern: "cypress/integration/examples/spec.js",
+    specPattern: "cypress/integration/examples/blabla.js",
     setupNodeEvents(on, config) {
       // implement node event listeners here
     },
