@@ -2,7 +2,7 @@
 
 describe("DailyToDo test cases", () => {
   it("Create a single task for the ToDo list", () => {
-    cy.visit("https://dailytodo.org/");
+    cy.visit(Cypress.env("url"));
     const task_entry = "a_random_entry";
     cy.get('input[type="submit"]').click();
     cy.get("textarea").type(task_entry);
@@ -15,7 +15,7 @@ describe("DailyToDo test cases", () => {
   });
 
   it("Create multiple tasks for the ToDo list", () => {
-    cy.visit("https://dailytodo.org/");
+    cy.visit(Cypress.env("url"));
     const task_entry1 = "First entry{enter}";
     const task_entry2 = "Second entry{enter}";
     const task_entry3 = "Third entry";
@@ -38,7 +38,7 @@ describe("DailyToDo test cases", () => {
   });
 
   it("Start the DailyToDo list but cancel the entry", () => {
-    cy.visit("https://dailytodo.org/");
+    cy.visit(Cypress.env("url"));
     const homeDescription = "Daily Todo is a simple tool";
     cy.get('input[type="submit"]').click();
     cy.get(".red").click();
